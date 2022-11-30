@@ -1,38 +1,170 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #5f87ea;
+}
+
+.upload-text {
+  color: #5f87ea;
+  font-size: 22px;
+  font-weight: 600;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.container {
+  background: #fff;
+  padding: 60px;
+  width: 650px;
+  border-radius: 15px;
+  background-image: url(/src/images/imageedit_2_3187878621.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  max-height: 100%;
+  background-position-y: 20px;
+  background-size: 97%;
+}
+
+.container header {
+  color: #5f87ea;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.container form {
+  border: 3px dashed #5f87ea;
+  height: 170px;
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: #faf4f4;
+  cursor: pointer;
+}
+
+.container form .button {
+  background-color: #4863a0;
+  color: #fff;
+  padding: 6px 23px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 8px 15px rgba(8, 67, 176, 0.4);
+  border: none;
+  font-size: 14px;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form :where(i, p) {
+  color: #5f87ea;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form i {
+  font-size: 45px;
+  opacity: 0.5;
+}
+
+form p {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+section .row {
+  background: #fff;
+  margin-bottom: 10px;
+  list-style: none;
+  padding: 15px 20px;
+  border-radius: 5px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  box-shadow: 0px 8px 15px rgba(8, 67, 176, 0.4);
 }
 
-.App-link {
-  color: #61dafb;
+section .row i {
+  font-size: 30px;
+  color: #5f87ea;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+section .details span {
+  font-size: 14px;
 }
+
+.progress-area .row .content {
+  width: 100%;
+  margin-left: 15px;
+}
+
+.progress-area .details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+.progress-area .progress-bar {
+  height: 6px;
+  width: 100%;
+  background: #d7d5d5;
+  border-radius: 15px;
+  margin-bottom: 4px;
+}
+
+.progress-bar .progress {
+  height: 100%;
+  width: 0%;
+  background: #8382ee;
+  border-radius: inherit;
+}
+
+.upload-area::-webkit-scrollbar {
+  width: 0px;
+}
+
+.upload-area {
+  max-height: 175px;
+  overflow-y: scroll;
+}
+
+.upload-area .row .content {
+  display: flex;
+  align-items: center;
+}
+
+.upload-area .row .details {
+  display: flex;
+  margin-left: 15px;
+  flex-direction: column;
+}
+
+.upload-area .details .size {
+  font-size: 11px;
+  color: #5f87ea;
+}
+
+.upload-area .fa-check {
+  color: #5f87ea;
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 280px) and (max-width: 480px) {
+  .container {
+   align-items: center;
+   justify-content: center;
+   max-width: max-content;
+    }
+  }
+ 
